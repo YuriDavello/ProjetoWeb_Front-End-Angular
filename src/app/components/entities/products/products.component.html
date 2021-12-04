@@ -1,3 +1,10 @@
-<h1>
-    This is products component
-</h1>
+<div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let product of products">
+        <img class="card-img-top" src="assets\img\ipad.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h1 class="card-title">{{product.nome}}</h1>
+          <p class="card-text">{{product.quantidade}}</p>
+          <a href="#" class="btn btn-primary">R$ {{product.valor}},00</a>
+        </div>
+    </div>
+</div>
