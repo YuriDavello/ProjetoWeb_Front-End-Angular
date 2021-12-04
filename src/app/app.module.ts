@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './components/account/user-login/user-login.component';
 import { UserRegistrationComponent } from './components/account/user-registration/user-registration.component';
@@ -9,6 +11,10 @@ import { AuthenticationComponent } from './components/layout/authentication/auth
 import { HomeComponent } from './components/layout/home/home.component';
 import { MainComponent } from './components/entities/main/main.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsComponent } from './components/entities/products/products.component';
+import { CartComponent } from './components/entities/cart/cart.component';
+import { DetailsComponent } from './components/entities/details/details.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserRegistrationComponent,
     AuthenticationComponent,
     HomeComponent,
-    MainComponent
+    MainComponent,
+    ProductsComponent,
+    CartComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
