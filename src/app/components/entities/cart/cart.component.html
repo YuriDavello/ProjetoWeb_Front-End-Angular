@@ -1,1 +1,17 @@
-<p>cart works!</p>
+<div class="container">
+    <div class="total-value">
+        <h1>Valor total R$ {{totalValue}}</h1>
+    </div>
+
+    <div class="card-product" *ngFor="let product of products">
+      <div class="img">
+        <img src="assets\img\ipad.jpg" alt="">
+      </div>
+      <div class="info">
+        <h1>{{product.nome}}</h1>
+        <p>R$ {{product.valor}}</p>
+        <!-- <p>{{product.quantidade}}</p> -->
+        <button (click)="removeFromCart(product)">Remover do carrinho</button>
+      </div>
+    </div>
+</div>

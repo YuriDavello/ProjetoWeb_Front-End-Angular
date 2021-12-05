@@ -1,15 +1,15 @@
 <div class="container">
-    <div class="card" style="width: 18rem;" *ngFor="let product of products">
-        <img class="card-img-top" src="assets\img\ipad.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">{{product.nome}}</h1>
-          <div class="valor">
-            <p>R$ {{product.valor}}</p>
-          </div>
-          <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-          <p *ngIf="product.quantidade != 0">Disponível</p>
-          <p *ngIf="product.quantidade == 0">Indisponível</p>
-          <p class="card-text">Em estoque: <b>{{product.quantidade}}</b></p>
-        </div>
+    <div class="card-product" *ngFor="let product of products">
+      <div class="img">
+        <img src="assets\img\ipad.jpg" alt="">
+      </div>
+      <div class="info">
+        <h1>{{product.nome}}</h1>
+        <p>R$ {{product.valor}}</p>
+        <!-- <p>{{product.quantidade}}</p> -->
+        <button (click)="addToCart(product)">Adicionar ao carrinho</button>
+        <p *ngIf="product.quantidade != 0">Disponível</p>
+        <p *ngIf="product.quantidade == 0">Indisponível</p>
+      </div>
     </div>
 </div>

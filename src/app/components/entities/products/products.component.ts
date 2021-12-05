@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [];
   available?: boolean = false;
   unavailable?: boolean = false;
+  sessionProducts: Product[] = [];
 
   constructor(
     private productsService: ProductsService
@@ -29,16 +30,12 @@ export class ProductsComponent implements OnInit {
       );
   }
 
-  public isAvailable() {
-    for (let product of this.products) {
-      if (product.quantidade! > 0) {
-        console.log("maior que 0")
-        this.available = true;
-      } else {
-        console.log("0")
-        this.available = false;
-      }
+  public addToCart(product: Product) {
+    let productsGet: Product[] = JSON.parse(sessionStorage.getItem('products')!);
+    if (productsGet == null) {
+      productsGet = [];
     }
+    productsGet.push(product);
+    window.sessionStorage.setItem('products', JSON.stringify(productsGet));
   }
-
 }
