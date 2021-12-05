@@ -3,8 +3,13 @@
         <img class="card-img-top" src="assets\img\ipad.jpg" alt="Card image cap">
         <div class="card-body">
           <h1 class="card-title">{{product.nome}}</h1>
-          <p class="card-text">{{product.quantidade}}</p>
-          <a href="#" class="btn btn-primary">R$ {{product.valor}},00</a>
+          <div class="valor">
+            <p>R$ {{product.valor}}</p>
+          </div>
+          <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+          <p *ngIf="product.quantidade != 0">Disponível</p>
+          <p *ngIf="product.quantidade == 0">Indisponível</p>
+          <p class="card-text">Em estoque: <b>{{product.quantidade}}</b></p>
         </div>
     </div>
 </div>

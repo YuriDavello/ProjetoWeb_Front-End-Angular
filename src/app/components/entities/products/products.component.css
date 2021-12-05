@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family: 'Noto Sans';
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.valor {
+    width: 100%
+}
+
+.card-body-sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-text {
+    margin-top: 8px;
+}
