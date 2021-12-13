@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/entities/products/products.compo
 import { CartComponent } from './components/entities/cart/cart.component';
 import { DetailsComponent } from './components/entities/details/details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
