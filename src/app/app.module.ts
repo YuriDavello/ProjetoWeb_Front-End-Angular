@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './components/account/user-login/user-login.component';
 import { UserRegistrationComponent } from './components/account/user-registration/user-registration.component';
 import { AuthenticationComponent } from './components/layout/authentication/authentication.component';
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
