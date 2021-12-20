@@ -33,7 +33,7 @@ export class UsersService {
     obs
       .subscribe(
         (resp: any) => {
-          window.sessionStorage.setItem('token', JSON.stringify(resp.token));
+          window.sessionStorage.setItem('token', resp.token);
           this.router.navigateByUrl("/");
         }
       );

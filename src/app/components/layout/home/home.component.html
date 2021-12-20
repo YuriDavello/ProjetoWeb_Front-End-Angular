@@ -1,13 +1,13 @@
 <p>
     <mat-toolbar>
         <div class="left">
-            <span routerLink="">My App</span>
+            <span routerLink="">Home</span>
             <span routerLink="products">Products</span>
         </div>
         <div class="right">
-            <mat-icon routerLink="details">person_outline</mat-icon>
+            <!-- <mat-icon routerLink="details">person_outline</mat-icon> -->
             <mat-icon routerLink="cart">shopping_cart</mat-icon>
-            <mat-icon routerLink="login">logout</mat-icon>
+            <mat-icon routerLink="login" (click)="logout()">logout</mat-icon>
         </div>
     </mat-toolbar>
   </p>

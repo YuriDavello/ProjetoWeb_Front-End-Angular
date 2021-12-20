@@ -18,6 +18,7 @@ import { CartComponent } from './components/entities/cart/cart.component';
 import { DetailsComponent } from './components/entities/details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EmailConfirmationComponent } from './components/account/email-confirmation/email-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     MainComponent,
     ProductsComponent,
     CartComponent,
-    DetailsComponent
+    DetailsComponent,
+    EmailConfirmationComponent
   ],
   imports: [
     BrowserModule,

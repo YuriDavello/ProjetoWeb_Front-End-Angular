@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -10,7 +11,9 @@ export class CartComponent implements OnInit {
   products: Product[] = [];
   totalValue?: number;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.products = JSON.parse(window.sessionStorage.getItem('products')!);
@@ -32,6 +35,12 @@ export class CartComponent implements OnInit {
       value += product.valor!;
     }
     return value;
+  }
+
+  public checkout() {
+    window.alert("Compra confirmada")
+    window.sessionStorage.setItem("products", JSON.stringify([]));
+    this.ngOnInit();
   }
 
 }

@@ -18,7 +18,7 @@ h1 {
 }
 
 .card-product {
-    width: 100%;
+    width: 50%;
     height: 200px;
     
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
@@ -50,4 +50,11 @@ button {
 
 button:hover {
     background-color: #1d7cac;
+}
+
+.total-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

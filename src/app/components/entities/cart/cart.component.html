@@ -1,12 +1,10 @@
 <div class="container">
     <div class="total-value">
         <h1>Valor total R$ {{totalValue}}</h1>
+        <button (click)="checkout()">Confirmar compra</button>
     </div>
 
     <div class="card-product" *ngFor="let product of products">
-      <div class="img">
-        <img src="assets\img\ipad.jpg" alt="">
-      </div>
       <div class="info">
         <h1>{{product.nome}}</h1>
         <p>R$ {{product.valor}}</p>
