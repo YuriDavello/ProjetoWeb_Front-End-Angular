@@ -1,1 +1,22 @@
-<p>email-confirmation works!</p>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+      </div>
+  
+      <!-- Login Form -->
+      <form (submit)="confirm()">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="confirm your email" [(ngModel)]="username">
+        <input type="submit" class="fadeIn fourth" value="Confirm">
+      </form>
+<!--   
+      <div id="formFooter">
+        <div routerLink="/registration">
+            <a class="underlineHover">Register</a>
+        </div>
+      </div>
+   -->
+    </div>
+</div>

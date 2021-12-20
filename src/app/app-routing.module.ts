@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './components/account/comp/auth.guard';
+import { EmailConfirmationComponent } from './components/account/email-confirmation/email-confirmation.component';
 import { UserLoginComponent } from './components/account/user-login/user-login.component';
 import { UserRegistrationComponent } from './components/account/user-registration/user-registration.component';
 import { CartComponent } from './components/entities/cart/cart.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: 'login', component: UserLoginComponent},
-      {path: 'registration', component: UserRegistrationComponent}
+      {path: 'registration', component: UserRegistrationComponent},
+      {path: 'confirmation', component: EmailConfirmationComponent}
     ]
   }
 ];

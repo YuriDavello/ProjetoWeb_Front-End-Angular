@@ -38,6 +38,15 @@ export class UserRegistrationComponent implements OnInit {
     this.user!.usersData = this.usersData;
 
     this.usersService.register(this.user!);
+
+    this.username = " ";
+    this.password = " ";
+    this.confPassword = " ";
+    this.nome = " ";
+    this.cpf = " ";
+    this.nascimento = " ";
+    this.telefone = " ";
+    alert("Email de confirmação enviado")
   }
 
 }

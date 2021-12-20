@@ -9,7 +9,7 @@ import { UserLogin } from './../models/userlogin';
 })
 export class UsersService {
 
-  url?: string = 'http://localhost:8080/pwe'
+  url?: string = 'http://localhost:8080'
 
   constructor(
     private http: HttpClient,
@@ -18,7 +18,7 @@ export class UsersService {
 
   public register(user: User) {
     console.log(user)
-    let obs = this.http.post(`${this.url}/register`, user);
+    let obs = this.http.post(`${this.url}/email/confirm`, user);
     obs
       .subscribe(
         (resp) => {
@@ -29,7 +29,7 @@ export class UsersService {
   }
 
   public login(user: UserLogin) {
-    let obs = this.http.post(`${this.url}/login`, user);
+    let obs = this.http.post(`${this.url}/pwe/login`, user);
     obs
       .subscribe(
         (resp: any) => {
