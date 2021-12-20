@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class EmailConfirmationComponent implements OnInit {
 
   username?: string;
-  url?: string = 'http://localhost:8090'
+  url?: string = 'https://pwe-project-confirmation-api.herokuapp.com'
 
   constructor(
     private http: HttpClient,
